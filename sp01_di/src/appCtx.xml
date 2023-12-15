@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- appCtx.xml -->
+	<!-- IRecordImpl record = new IRecordImpl(); -->
+	<bean id="record" class="ex04.DI.IRecordImpl">
+		<!-- 필드 정확하게 명시 하고 싶을 때 -->
+		<constructor-arg name = "com" value = "20"/>
+		<constructor-arg name = "kor" value = "33"/>
+		<constructor-arg name = "eng" value = "55"/>
+		
+		<!-- 순서대로 넣고 싶지 않을 때 -->
+		<!-- 
+		<constructor-arg index = "2" value = "55" type = "int"/>
+		<constructor-arg index = "0" value = "88" type = "int"/>
+		<constructor-arg index = "1" value = "100"/>
+		-->
+		
+		<!-- 생성자에 값 부여, 쓴 순서대로 부여
+		<constructor-arg><value>100</value></constructor-arg>
+		<constructor-arg value="88" />
+		<constructor-arg value="77" />
+		-->
+	</bean>
+	
+	<!-- property는 setrcord로,  -->
+	<bean id="view" class="ex04.DI.IRecordViewImpl">
+		<property name="record" ref="record" />
+	</bean>
+	
+</beans>

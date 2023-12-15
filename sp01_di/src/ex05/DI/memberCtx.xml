@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		<!-- memberCtx.xml -->
+		
+		<!-- 생성자 -->
+		<bean id = "vo" class = "ex05.DI.MemberDTO" c:age="33" c:message="옵션이용한거야" c:name ="박태환"/>
+			
+
+		<!-- setter -->
+		<bean class= "ex05.DI.MemberDAO" id = "dao" p:dto-ref="vo"/>
+
+		
+		
+		<!-- 객체 생성할때는 bean , 생성자는 constructor-arg -->
+		<!-- <bean id = "vo" class = "ex05.DI.MemberDTO">
+			<constructor-arg value = "yuna"/>
+			<constructor-arg value = "33"/>
+			<constructor-arg value = "hello"/>
+		</bean>
+		
+		<bean class= "ex05.DI.MemberDAO" id = "dao">
+			
+			<constructor-arg ref = "vo"/>
+			
+			<property name="dto" ref = "vo"/>
+		</bean>
+ -->	
+</beans>
