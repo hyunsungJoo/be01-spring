@@ -14,6 +14,8 @@ public class MainEntry {
 		
 		
 		IRecordViewImpl view = (IRecordViewImpl)context.getBean("view");
+//		IRecordViewImpl view = (IRecordViewImpl)context.getBean("v"); // name(º°ÄªÀ¸·Îµµ µÊ)
+//		IRecordViewImpl view = (IRecordViewImpl)context.getBean("abc"); // name(º°ÄªÀ¸·Îµµ µÊ)
 //		IRecordViewImpl view = context.getBean("view", IRecordViewImpl.class); // ¹æ¹ý2
 		view.print();
 		

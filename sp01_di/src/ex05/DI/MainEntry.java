@@ -10,7 +10,7 @@ public class MainEntry {
 		
 		ApplicationContext ctx = new ClassPathXmlApplicationContext(config); // 설정파일
 		
-		MemberDAO dao = (MemberDAO)ctx.getBean("dao"); // Object타입이기때문에 형변환 해주어야함
+		MemberDAO dao = (MemberDAO)ctx.getBean("dao"); // Object타입이기때문에 형변환 해주어야함 // id
 //		MemberDAO dao2 = ctx.getBean("dao", MemberDAO.class);
 		MemberDAO dao2 = (MemberDAO)ctx.getBean("dao");
 		

@@ -26,7 +26,7 @@
 	</bean>
 	
 	<!-- property는 setrcord로,  -->
-	<bean id="view" class="ex04.DI.IRecordViewImpl">
+	<bean id="view" name = "v, v2, abc, xy" class="ex04.DI.IRecordViewImpl">
 		<property name="record" ref="record" />
 	</bean>
 	
