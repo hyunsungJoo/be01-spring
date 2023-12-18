@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- ctx.xml -->
+	
+	<!-- <bean id = "employee" class = "ex02.di.EmployeePersonImpl"/> // 디폴트 생성자가 없으면 에러 -->
+	
+	<bean id = "employee" class = "ex02.di.EmployeePersonImpl">
+		<constructor-arg name = "name" value = "김연아"/>
+		<constructor-arg name = "gender" value = "여자"/>
+		<constructor-arg name = "age" value = "30"/>
+		<constructor-arg>
+			<list>
+				<value>독서</value>
+				<value>영화감상</value>
+				<value>잠자기</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id = "student" class = "ex02.di.StudentPersonImpl">
+		<property name="name" value = "주현성"/>
+		<property name="gender" value = "남자"/>
+		<property name="age" value = "27"/>
+		<property name = "score">
+			<list>
+				<value>99</value>
+				<value>88</value>
+				<value>65</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id = "info" class = "ex02.di.MyInformation" p:person-ref="student"/>
+	<bean id = "info2" class = "ex02.di.MyInformation" p:person-ref="employee"/>
+	
+	
+	
+</beans>
