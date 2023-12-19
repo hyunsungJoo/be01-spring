@@ -19,7 +19,9 @@ public class MainEntry {
 //		MyInformation info2 = (MyInformation)ctx.getBean("info2");
 		
 		info.processMessage(stu);
+		info.processMessage(emp); //??????????
 //		info.setPerson(new StudentPerosnImpl());
+		info.processMessage();
 		
 		info.processMessage("gildong", 30, "³²ÀÚ");
 		
@@ -31,6 +33,7 @@ public class MainEntry {
 		MyInformation info2 = ctx.getBean("info2", MyInformation.class);
 		emp.personShow(hobbys);
 		info2.processMessage(emp);
+		info2.processMessage(stu);
 		
 	}
 }

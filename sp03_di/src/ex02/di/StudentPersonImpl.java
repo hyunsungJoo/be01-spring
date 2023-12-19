@@ -11,7 +11,7 @@ public class StudentPersonImpl implements Person {
 	private String name, gender;
 	private int age;
 	private ArrayList<Integer> score;
-
+	
 	@Override
 	public boolean personShow(String name, int age, String gender) {
 		System.out.println(name + " / " + age + " / " + gender);
@@ -30,4 +30,9 @@ public class StudentPersonImpl implements Person {
 		}
 		return true;
 	}
+
+	public StudentPersonImpl() {
+		System.out.println("student 기본생성자");
+	}
+
 }

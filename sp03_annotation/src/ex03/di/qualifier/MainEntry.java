@@ -1,4 +1,4 @@
-package ex02.di.autowired;
+package ex03.di.qualifier;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
@@ -7,9 +7,11 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class MainEntry {
 	public static void main(String[] args) {
 		
-		ApplicationContext ctx = new GenericXmlApplicationContext("ex02/di/autowired/autowiredCtx.xml"); // 积己磊 角青
+		ApplicationContext ctx = new GenericXmlApplicationContext("ex03/di/qualifier/qualifierCtx.xml"); // 积己磊 角青
 		
 		MonitorViewer viewer = (MonitorViewer)ctx.getBean("monitorViewer");
-		viewer.print();
+		
+		viewer.show();
+
 	}
 }

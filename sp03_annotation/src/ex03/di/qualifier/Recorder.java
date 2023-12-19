@@ -1,4 +1,4 @@
-package ex02.di.autowired;
+package ex03.di.qualifier;
 
 public class Recorder {
 	

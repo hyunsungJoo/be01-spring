@@ -35,9 +35,7 @@
 		</property>
 	</bean>
 	
-	<bean id = "info" class = "ex02.di.MyInformation" p:person-ref="student"/>
-	<bean id = "info2" class = "ex02.di.MyInformation" p:person-ref="employee"/>
-	
-	
+	<bean id = "info" class = "ex02.di.MyInformation" c:person-ref="student"/> <!-- 전체생성자불려짐 -->
+	<bean id = "info2" class = "ex02.di.MyInformation" c:person-ref="employee"/>
 	
 </beans>

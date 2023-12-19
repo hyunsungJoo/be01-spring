@@ -7,14 +7,16 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
-	<!-- autowiredCtx.xml -->
+	<!-- resourceCtx.xml -->
 	
-	<context:annotation-config/>
+	<context:annotation-config/> <!-- 자동으로 annotation 적굥에 필요한 클래스를 자동 로드 -->
 	
-	<bean id = "record" class = "ex02.di.autowired.Recorder"/>
-	<bean id = "record2" class = "ex02.di.autowired.Recorder"/>
-	<!-- <bean id = "monitorViewer" class = "ex02.di.autowired.MonitorViewer" p:recorder-ref="record"/> -->
-	<bean id = "monitorViewer" class = "ex02.di.autowired.MonitorViewer"/>
-	<!-- <bean id = "monitorViewer2" class = "ex02.di.autowired.MonitorViewer"/> -->
+	
+	<bean id = "r1" name = "record1, x" class = "ex04.di.resource.Recorder"></bean>
+	<bean id = "r2" name = "record2, y" class = "ex04.di.resource.Recorder"/>
+	<bean id = "r3" name = "record3, z" class = "ex04.di.resource.Recorder"/>
+	
+	<bean id = "monitorViewer" class = "ex04.di.resource.MonitorViewer"/>
+
 
 </beans>

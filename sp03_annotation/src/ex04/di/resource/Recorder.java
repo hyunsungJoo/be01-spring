@@ -1,4 +1,4 @@
-package ex02.di.autowired;
+package ex04.di.resource;
 
 public class Recorder {
 	
