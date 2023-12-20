@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	<!-- ctx.xml -->
+	<context:annotation-config></context:annotation-config>
+	
+	<!-- user class object creat -->
+	<bean class = "ex04.aop.BookBeanImpl" id = "bookBeanImpl"/>
+	<bean class = "ex04.aop.MessageBeanImpl" id = "messageBeanImpl"></bean>
+	<bean class = "ex04.aop.LoggingAdvice" id = "advice"></bean>
+	
+	<!-- aop설정 -->
+	<aop:config>
+		<aop:aspect id = "aspect" ref="advice">
+		<aop:pointcut expression="execution(public void ex04.aop.*.*Hello(..))" id="pointCut"/> <!-- 모든함수에 다 적용 -->
+		<!-- <aop:pointcut expression="execution(public int ex04.aop.*.*Hello(..))" id="pointCut"/> -->
+		<!-- <aop:pointcut expression="execution(public int ex04.aop.*.*Hello())" id="pointCut"/> --> <!-- 매개변수가 무조건없어야함 -->
+		<aop:around method="arround" pointcut-ref="pointCut"/>
+		</aop:aspect>
+	</aop:config>
+	
+</beans>
