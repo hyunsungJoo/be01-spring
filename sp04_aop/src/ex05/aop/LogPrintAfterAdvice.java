@@ -14,7 +14,7 @@ public class LogPrintAfterAdvice implements AfterReturningAdvice{
 		
 		System.out.println("AfterReturningAdvice Start");
 		Log log = LogFactory.getLog(this.getClass());
-		log.info("[ÁÖ ¾÷¹«°¡ ½ÇÇàµÇ°í µ¹¾Æ¿Í¼­ ¹Ù·Î ½ÇÇà]");
+		log.info("[ì£¼ ì—…ë¬´ê°€ ì‹¤í–‰ë˜ê³  ëŒì•„ì™€ì„œ ë°”ë¡œ ì‹¤í–‰]");
 		
 		System.out.println("[AfterReturningAdvice Method] : " + method.getModifiers());
 		System.out.println("[Return Value] : " + returnValue);

@@ -8,7 +8,7 @@ public class Curling {
 	private PlayerImpl player;
 
 	@Autowired
-	@Qualifier("p2") // ±¸ºĞÇØÁÖ±â À§ÇØ »ç¿ë, °´Ã¼ ¿©·¯°³ ÀÖÀ» ¶§ ÀÌ¸§ ÁöÁ¤
+	@Qualifier("p2") // êµ¬ë¶„í•´ì£¼ê¸° ìœ„í•´ ì‚¬ìš©, ê°ì²´ ì—¬ëŸ¬ê°œ ìˆì„ ë•Œ ì´ë¦„ ì§€ì •
 	public void setPlayer(PlayerImpl player) { // DI
 		this.player = player;
 	}

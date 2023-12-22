@@ -10,9 +10,6 @@
 		<org.springframework-versions>5.1.3.RELEASE</org.springframework-versions>
 	</properties>
 	
-
-
-
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>

@@ -3,7 +3,7 @@ package ex03.di.qualifier;
 public class Recorder {
 	
 	public Recorder() {
-		System.out.println("Recorder ±âº» »ı¼ºÀÚ");
+		System.out.println("Recorder ê¸°ë³¸ìƒì„±ì");
 	}
 
 	public void show() {

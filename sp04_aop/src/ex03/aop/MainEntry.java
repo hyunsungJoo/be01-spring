@@ -13,7 +13,7 @@ public class MainEntry {
 		ApplicationContext ctx =
 				new ClassPathXmlApplicationContext(config);
 		
-		// Proxy ¸¸µé°í °´Ã¼¸¦ ³Ñ±ä´Ù. ÇÊ¿äÇÑ °´Ã¼ »ı¼º ÀÛ¾÷Àº XML ¼³Á¤ÇßÀ½
+		// Proxy ë§Œë“¤ê³  ê°ì²´ë¥¼ ë„˜ê¸´ë‹¤. í•„ìš”í•œ ê°ì²´ ìƒì„± ì‘ì—…ì€ XML ì„¤ì •í–ˆìŒ
 		ICalc proxy = ctx.getBean("proxy", ICalc.class);
 		System.out.println(proxy.add(20, 30));
 		System.out.println(proxy.sub(1, 2, 3));

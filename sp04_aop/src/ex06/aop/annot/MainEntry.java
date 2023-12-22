@@ -19,13 +19,5 @@ public class MainEntry {
 		worker.getWorkerInfo();
 		System.out.println("**************************");
 		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }

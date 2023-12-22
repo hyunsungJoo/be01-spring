@@ -8,7 +8,7 @@ public class MainEntry {
 		
 		IRecordViewImpl view = new IRecordViewImpl();
 		
-		//Á¶¸³
+		// ì¡°ë¦½
 		view.setRecord(record);
 		view.input();
 		view.print();

@@ -32,7 +32,7 @@ public class StudentPersonImpl implements Person {
 	}
 
 	public StudentPersonImpl() {
-		System.out.println("student ±âº»»ı¼ºÀÚ");
+		System.out.println("student ê¸°ë³¸ìƒì„±ì");
 	}
 
 }

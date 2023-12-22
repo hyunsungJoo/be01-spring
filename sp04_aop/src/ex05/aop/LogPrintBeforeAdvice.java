@@ -9,11 +9,13 @@ import org.springframework.aop.MethodBeforeAdvice;
 public class LogPrintBeforeAdvice implements MethodBeforeAdvice {
 
 	@Override
-	public void before(Method method, Object[] args, Object target) throws Throwable {
-		
-		System.out.println("Before Advice Start");
-		Log log = LogFactory.getLog(this.getClass());
-		log.info("[Method Before Advice] º¸Á¶ ¾÷¹« ±¸Çö (ÁÖ¾÷¹« ½ÃÀÛÀü...)");
+	public void before(Method method, Object[] args, Object target) 
+			throws Throwable {
 
+		System.out.println("Befor Advice Start");
+		Log log = LogFactory.getLog(this.getClass());
+		log.info("[Method Befor Advice] ë³´ì¡° ì—…ë¬´ êµ¬í˜„ (ì£¼ì—…ë¬´ ì‹œìž‘ì „...)");
+		
 	}
+
 }

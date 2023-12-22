@@ -25,5 +25,4 @@
 	<!-- <bean id = "monitorViewer" class = "ex02.di.autowired.MonitorViewer" p:recorder-ref="record"/> -->
 	<bean id = "monitorViewer" class = "ex03.di.qualifier.MonitorViewer"/>
 	<!-- <bean id = "monitorViewer2" class = "ex02.di.autowired.MonitorViewer"/> -->
-
 </beans>

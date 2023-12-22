@@ -2,8 +2,8 @@ package ex06.aop.annot;
 
 import lombok.Setter;
 
-@Setter // setter¸¸ ¸¸µé¾îÁÜ
-public class Student { // ÇĞ»ı Å¬·¡½º
+@Setter // setterë§Œ ë§Œë“¤ì–´ì¤Œ
+public class Student { // í•™ìƒ í´ë˜ìŠ¤
 	
 	private String name;
 	private int age, gradeNum, classNum;
@@ -11,9 +11,9 @@ public class Student { // ÇĞ»ı Å¬·¡½º
 	// setter method --> DI
 	
 	public void getStudentInfo() {
-		System.out.println("ÀÌ¸§ : " + this.name);
-		System.out.println("³ªÀÌ : " + this.age);
-		System.out.println("ÇĞ³â : " + this.gradeNum);
-		System.out.println("¹İ : " + this.classNum);
+		System.out.println("ì´ë¦„ : " + this.name);
+		System.out.println("ë‚˜ì´ : " + this.age);
+		System.out.println("í•™ë…„ : " + this.gradeNum);
+		System.out.println("ë°˜ : " + this.classNum);
 	}
 }

@@ -1,6 +1,7 @@
 package ex04.DI;
 
 public class IRecordImpl implements IRecord {
+
 	
 	private int kor, eng, com;
 

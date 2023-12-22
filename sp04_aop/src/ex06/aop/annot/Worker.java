@@ -3,15 +3,15 @@ package ex06.aop.annot;
 import lombok.Setter;
 
 @Setter
-public class Worker { // Á÷ÀåÀÎ Å¬·¡½º
+public class Worker { // ì§ì¥ì¸ í´ë˜ìŠ¤
 
 	private String name;
 	private int age;
 	private String job;
 	
 	public void getWorkerInfo() {
-		System.out.println("ÀÌ¸§ : " + this.name);
-		System.out.println("³ªÀÌ : " + this.age);
-		System.out.println("Á÷¾÷ : " + this.job);
+		System.out.println("ì´ë¦„ : " + this.name);
+		System.out.println("ë‚˜ì´ : " + this.age);
+		System.out.println("ì§ì—… : " + this.job);
 	}	
 }

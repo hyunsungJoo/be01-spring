@@ -13,22 +13,22 @@ public class LogPrintHandlerImpl implements MethodInterceptor {
 
 		System.out.println("MethodInterceptor interface invoke method start~~~~");
 
-		// º¸Á¶ ¾÷¹«
+		// ë³´ì¡° ì—…ë¬´
 		Log log = LogFactory.getLog(this.getClass());
 
 		StopWatch sw = new StopWatch();
-		sw.start(); // ½Ã°£ÃøÁ¤ ½ÃÀÛ
-		log.info("Å¸ÀÌ¸Ó ½ÃÀÛ");
+		sw.start(); // ì‹œê°„ì¸¡ì • ì‹œì‘
+		log.info("íƒ€ì´ë¨¸ ì‹œì‘");
 
-		//////////// main °ü½É ½ÇÇà ////////////////////
+		//////////// main ê´€ì‹¬ ì‹¤í–‰ ////////////////////
 		Object result = invocation.proceed();
 		////////////////////////////////////////////////
 
-		sw.stop();  // ½Ã°£ÃøÁ¤ ³¡
-		log.info("Å¸ÀÌ¸Ó Á¤Áö");
+		sw.stop();  // ì‹œê°„ì¸¡ì • ë
+		log.info("íƒ€ì´ë¨¸ ì •ì§€");
 		
-		log.info("[TimerLOG] Memthod : " + invocation.getMethod() );  // ½ÇÇàÇÑ ¸Ş¼Òµå ¸íÄª
-		log.info("[TimerLOG} proecess Time : "+ sw.getTotalTimeMillis()); // ÀÛ¾÷¿¡ °É¸° ½Ã°£
+		log.info("[TimerLOG] Memthod : " + invocation.getMethod() );  // ì‹¤í–‰í•œ ë©”ì†Œë“œ ëª…ì¹­
+		log.info("[TimerLOG} proecess Time : "+ sw.getTotalTimeMillis()); // ì‘ì—…ì— ê±¸ë¦° ì‹œê°„
 		
 		return result; 
 	}

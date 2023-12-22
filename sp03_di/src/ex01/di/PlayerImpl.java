@@ -9,20 +9,20 @@ public class PlayerImpl implements Player {
 	@Override
 	public void input() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¼±¼ö ÀÌ¸§ : ");
+		System.out.print("ì„ ìˆ˜ ì´ë¦„ : ");
 		this.name = sc.next();
-		System.out.print("Æ÷Áö¼Ç : ");
+		System.out.print("í¬ì§€ì…˜ : ");
 		this.position = sc.next();
-//		System.out.print("Á¾¸ñ : ");
+//		System.out.print("ì¢…ëª© : ");
 //		this.sport = sc.next();
 	}
 
 	@Override
 	public void info() {
-		System.out.println("\n==========¼±¼öÁ¤º¸==========");
-		System.out.println("¼±¼ö ÀÌ¸§ : " + this.name);
-		System.out.println("Æ÷Áö¼Ç : " + this.position);
-//		System.out.println("Á¾¸ñ : " + this.sport);
+		System.out.println("\n==========ì„ ìˆ˜ì •ë³´==========");
+		System.out.println("ì„ ìˆ˜ ì´ë¦„ : " + this.name);
+		System.out.println("í¬ì§€ì…˜ : " + this.position);
+//		System.out.println("ì¢…ëª© : " + this.sport);
 //		System.out.println();
 	}
 

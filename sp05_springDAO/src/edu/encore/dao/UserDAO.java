@@ -78,9 +78,6 @@ public abstract class UserDAO { // 추상클래스
 			String pwd = rs.getString("password");
 			System.out.println(myid + "\t" + name + "\t" + pwd);
 		} // while end
-
-		
-
 	}
 
 	// update

@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	
 	<!-- appCtx.xml -->
 	<!-- IRecordImpl record = new IRecordImpl(); -->
 	<bean id="record" class="ex04.DI.IRecordImpl">
@@ -10,7 +11,7 @@
 		<constructor-arg name = "com" value = "20"/>
 		<constructor-arg name = "kor" value = "33"/>
 		<constructor-arg name = "eng" value = "55"/>
-		
+
 		<!-- 순서대로 넣고 싶지 않을 때 -->
 		<!-- 
 		<constructor-arg index = "2" value = "55" type = "int"/>

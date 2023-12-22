@@ -6,11 +6,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public class Basketball {
 	
 	@Autowired
-	@Qualifier("player2") // autowired ¾ø´Â»óÅÂ¿¡¼­ ±âÀç ºÒ°¡
+	@Qualifier("player2") // autowired ì§€ì •
 	private PlayerImpl player;
 
 	public void setPlayer(PlayerImpl player) { // DI
 		this.player = player;
 	}
-
 }

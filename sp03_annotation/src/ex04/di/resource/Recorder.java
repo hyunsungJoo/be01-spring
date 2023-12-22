@@ -3,7 +3,7 @@ package ex04.di.resource;
 public class Recorder {
 	
 	public Recorder() {
-		System.out.println("Recorder ±âº» »ı¼ºÀÚ");
+		System.out.println("Recorder ê¸°ë³¸ìƒì„±ì");
 	}
 
 	public void show() {

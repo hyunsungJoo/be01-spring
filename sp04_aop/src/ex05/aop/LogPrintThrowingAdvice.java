@@ -4,10 +4,10 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.aop.ThrowsAdvice;
 
-public class LogPrintThrowingAdvice implements ThrowsAdvice { // Ãß»ó¸Ş¼­µå ¾È°¡Áö°íÀÖÀ½ ¸¸µé¾îÁÖ¾î¾ßÇÔ
+public class LogPrintThrowingAdvice implements ThrowsAdvice { // ì¶”ìƒë©”ì„œë“œ ì•ˆê°€ì§€ê³ ìˆìŒ ë§Œë“¤ì–´ì£¼ì–´ì•¼í•¨
 	
 	public void afterThrowing(IllegalArgumentException e) {
 		Log log = LogFactory.getLog(this.getClass());
-		log.info("[afterThrowing ¿¹¿Ü ¹ß»ı] : " + e.getMessage());
+		log.info("[afterThrowing ì˜ˆì™¸ ë°œìƒ] : " + e.getMessage());
 	}
 }

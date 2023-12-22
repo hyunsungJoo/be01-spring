@@ -7,31 +7,31 @@ import lombok.Data;
 @Data
 public class MonitorViewer {
 	
-	// 1. ÇÊµå¿¡ Àû¿ë
+	// 1. í•„ë“œì— ì ìš©
 //	@Autowired
 	@Qualifier("record")
 	private Recorder recorder; // has-a 
 	
 	
-	// 2. setter method¸¦ ÅëÇÑ ÀÚµ¿ÁÖÀÔ
+	// 2. setter methodë¥¼ í†µí•œ ìë™ì£¼ì…
 //	@Autowired
 //	public void setRecorder(Recorder recorder) {
 //		this.recorder = recorder;
 //	}
 	
-	// 3. ÀÏ¹İÀûÀÎ ¸Ş¼Òµå
+	// 3. ì¼ë°˜ì ì¸ ë©”ì†Œë“œ
 	@Autowired
 	@Qualifier("record")
 	public void userMethod(Recorder recorder) {
 		this.recorder = recorder;
-		System.out.println("»ç¿ëÀÚ(ÀÏ¹İ)¸Ş¼Òµå ÀÌ¿ëÇÑ ÀÚµ¿ ÁÖÀÔ");
+		System.out.println("ì‚¬ìš©ì(ì¼ë°˜)ë©”ì†Œë“œ ì´ìš©í•œ ìë™ ì£¼ì…");
 	}
 	
-	// 4. »ı¼ºÀÚ ÇÔ¼ö¸¦ ÀÌ¿ëÇÑ ÁÖÀÔ // »ı¼ºÀÚ¸¦ÅëÇØ ÁÖÀÔÇÏ¸é ±âº»»ı¼ºÀÚ°¡ »ı¼º¾ÈµÊ...?
+	// 4. ìƒì„±ì í•¨ìˆ˜ë¥¼ ì´ìš©í•œ ì£¼ì… // ìƒì„±ìë¥¼í†µí•´ ì£¼ì…í•˜ë©´ ê¸°ë³¸ìƒì„±ìê°€ ìƒì„±ì•ˆë¨...?
 	@Autowired
 	public MonitorViewer(@Qualifier("record2")Recorder recorder) {
 		this.recorder = recorder;
-		System.out.println("³ª »ı¼ºÀÚ ÇÔ¼ö ÀÌ¿ëÇÑ ÀÚµ¿ ÁÖÀÔ");
+		System.out.println("ë‚˜ ìƒì„±ì í•¨ìˆ˜ ì´ìš©í•œ ìë™ ì£¼ì…");
 	}
 
 	public void print() {
@@ -39,7 +39,7 @@ public class MonitorViewer {
 	}
 
 	public MonitorViewer() {
-		System.out.println("monitorViewer ±âº»»ı¼ºÀÚ");
+		System.out.println("monitorViewer ê¸°ë³¸ìƒì„±ì");
 	}
 	
 	

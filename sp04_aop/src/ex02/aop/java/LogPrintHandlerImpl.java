@@ -16,24 +16,24 @@ public class LogPrintHandlerImpl implements InvocationHandler {
 	}
 
 	@Override
-	public Object invoke(Object proxy, Method method, Object[] args) // º¸Á¶ÇÁ·Î±×·¥ ±¸Çö
+	public Object invoke(Object proxy, Method method, Object[] args) // ë³´ì¡°í”„ë¡œê·¸ë¨ êµ¬í˜„
 			throws Throwable {
 		System.out.println("invoke method start......");
-		// º¸Á¶ ¾÷¹« ±¸Çö
+		// ë³´ì¡° ì—…ë¬´ êµ¬í˜„
 		Log log = LogFactory.getLog(this.getClass());
 
 		StopWatch sw = new StopWatch();
-		sw.start(); // ½Ã°£ÃøÁ¤ ½ÃÀÛ
-		log.info("Å¸ÀÌ¸Ó ½ÃÀÛ");
+		sw.start(); // ì‹œê°„ì¸¡ì • ì‹œì‘
+		log.info("íƒ€ì´ë¨¸ ì‹œì‘");
 
-		//////////// main °ü½É ½ÇÇà ////////////////////
+		//////////// main ê´€ì‹¬ ì‹¤í–‰ ////////////////////
 		int result = (int)method.invoke(target, args);
 		////////////////////////////////////////////////
-		sw.stop();  // ½Ã°£ÃøÁ¤ ³¡
-		log.info("Å¸ÀÌ¸Ó Á¤Áö");
+		sw.stop();  // ì‹œê°„ì¸¡ì • ë
+		log.info("íƒ€ì´ë¨¸ ì •ì§€");
 		
 		log.info("[TimerLOG] Memthod : "+ method.getName() );
-		log.info("[TimerLOG} proecess Time : "+ sw.getTotalTimeMillis()); // ÀÛ¾÷¿¡ °É¸° ½Ã°£
+		log.info("[TimerLOG} proecess Time : "+ sw.getTotalTimeMillis()); // ì‘ì—…ì— ê±¸ë¦° ì‹œê°„
 		
 		return result;
 	}

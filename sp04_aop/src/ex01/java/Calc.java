@@ -4,22 +4,22 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.util.StopWatch;
 
-public class Calc { // »çÄ¢¿¬»ê ÇÁ·Î±×·¥ - µ¡¼À, »¬¼À, °ö¼À, ³ª´°¼À
+public class Calc { // ì‚¬ì¹™ì—°ì‚° í”„ë¡œê·¸ë¨ - ë§ì…ˆ, ëº„ì…ˆ, ê³±ì…ˆ, ë‚˜ëˆ—ì…ˆ
 	
 	public int add(int x, int y) {
 		Log log = LogFactory.getLog(this.getClass());
 		
 		StopWatch sw = new StopWatch();
-		sw.start(); // ½Ã°£ÃøÁ¤ ½ÃÀÛ
-		log.info("Å¸ÀÌ¸Ó ½ÃÀÛ");
+		sw.start(); // ì‹œê°„ì¸¡ì • ì‹œì‘
+		log.info("íƒ€ì´ë¨¸ ì‹œì‘");
 		
 		int result = x + y;
 		
-		sw.stop(); // ½Ã°£ÃøÁ¤ ³¡
-		log.info("Å¸ÀÌ¸Ó Á¤Áö");
+		sw.stop(); // ì‹œê°„ì¸¡ì • ë
+		log.info("íƒ€ì´ë¨¸ ì •ì§€");
 		
 		log.info("[TimerLOG] Memthod : add ");
-		log.info("[TimerLOG] process Time : " + sw.getTotalTimeMillis()); // ÀÛ¾÷¿¡ °É¸° ½Ã°£
+		log.info("[TimerLOG] process Time : " + sw.getTotalTimeMillis()); // ì‘ì—…ì— ê±¸ë¦° ì‹œê°„
 		
 		return result;	
 	}
@@ -28,16 +28,16 @@ public class Calc { // »çÄ¢¿¬»ê ÇÁ·Î±×·¥ - µ¡¼À, »¬¼À, °ö¼À, ³ª´°¼À
 		Log log = LogFactory.getLog(this.getClass());
 		
 		StopWatch sw = new StopWatch();
-		sw.start(); // ½Ã°£ÃøÁ¤ ½ÃÀÛ
-		log.info("Å¸ÀÌ¸Ó ½ÃÀÛ");
+		sw.start(); // ì‹œê°„ì¸¡ì • ì‹œì‘
+		log.info("íƒ€ì´ë¨¸ ì‹œì‘");
 		
 		int result = x * y;
 		
-		sw.stop(); // ½Ã°£ÃøÁ¤ ³¡
-		log.info("Å¸ÀÌ¸Ó Á¤Áö");
+		sw.stop(); // ì‹œê°„ì¸¡ì • ë
+		log.info("íƒ€ì´ë¨¸ ì •ì§€");
 		
 		log.info("[TimerLOG] Memthod : add ");
-		log.info("[TimerLOG] process Time : " + sw.getTotalTimeMillis()); // ÀÛ¾÷¿¡ °É¸° ½Ã°£
+		log.info("[TimerLOG] process Time : " + sw.getTotalTimeMillis()); // ì‘ì—…ì— ê±¸ë¦° ì‹œê°„
 		
 		return result;
 	}
@@ -46,16 +46,16 @@ public class Calc { // »çÄ¢¿¬»ê ÇÁ·Î±×·¥ - µ¡¼À, »¬¼À, °ö¼À, ³ª´°¼À
 		Log log = LogFactory.getLog(this.getClass());
 		
 		StopWatch sw = new StopWatch();
-		sw.start(); // ½Ã°£ÃøÁ¤ ½ÃÀÛ
-		log.info("Å¸ÀÌ¸Ó ½ÃÀÛ");
+		sw.start(); // ì‹œê°„ì¸¡ì • ì‹œì‘
+		log.info("íƒ€ì´ë¨¸ ì‹œì‘");
 		
 		int result = x * y * z;
 		
-		sw.stop(); // ½Ã°£ÃøÁ¤ ³¡
-		log.info("Å¸ÀÌ¸Ó Á¤Áö");
+		sw.stop(); // ì‹œê°„ì¸¡ì • ë
+		log.info("íƒ€ì´ë¨¸ ì •ì§€");
 		
 		log.info("[TimerLOG] Memthod : add ");
-		log.info("[TimerLOG] process Time : " + sw.getTotalTimeMillis()); // ÀÛ¾÷¿¡ °É¸° ½Ã°£
+		log.info("[TimerLOG] process Time : " + sw.getTotalTimeMillis()); // ì‘ì—…ì— ê±¸ë¦° ì‹œê°„
 		
 		return result;
 	}

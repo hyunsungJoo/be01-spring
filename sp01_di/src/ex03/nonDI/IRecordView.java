@@ -2,8 +2,7 @@ package ex03.nonDI;
 
 public interface IRecordView {
 	
-	
-	// µ¥ÀÌÅÍ ÀÔ·Â, Ãâ·Â
+	// ë°ì´í„° ì…ë ¥, ì¶œë ¥ 
 	void input();
 	void print();
 

@@ -3,27 +3,27 @@ package ex04.aop;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.springframework.util.StopWatch;
 
-/*XML ±â¹İ POJO¹æ½ÄÀÇ AspectJ¸¦ ÀÌ¿ëÇÑ AOP ¹æ¹ı*/
+/*XML ê¸°ë°˜ POJOë°©ì‹ì˜ AspectJë¥¼ ì´ìš©í•œ AOP ë°©ë²•*/
 public class LoggingAdvice {
 	
-//	Around ¹æ½ÄÀÇ »çÀü/»çÈÄ Ã³¸® AOP around ¹æ½ÄÀ¸·Î ÇÒ¶§´Â
-//	ÀÎ¼ö´Â ProceedingJoinPoint, ¸®ÅÏ - Object ÇÊ¼ö 
+//	Around ë°©ì‹ì˜ ì‚¬ì „/ì‚¬í›„ ì²˜ë¦¬ AOP around ë°©ì‹ìœ¼ë¡œ í• ë•ŒëŠ”
+//	ì¸ìˆ˜ëŠ” ProceedingJoinPoint, ë¦¬í„´ - Object í•„ìˆ˜ 
 	
 	public Object arround(ProceedingJoinPoint point) throws Throwable {
 		
 		String methodName = point.getKind();
 		String methodName2 = point.getSignature().getName();
 		
-		System.out.println("[LOG] methodName = " + methodName +", methodName2 = " + methodName2 + " È£Ãâ µÇ±â Àü,.....");
+		System.out.println("[LOG] methodName = " + methodName +", methodName2 = " + methodName2 + " í˜¸ì¶œ ë˜ê¸° ì „,.....");
 		StopWatch sw = new StopWatch();
 		sw.start(methodName);
 		
-		///// ÁÖ°ü½É ½ÇÇà ÄÚµå ///////////////////////////////
-		Object obj = point.proceed();   // ½ÇÁ¦ Å¸ÄÏ ´ë»ó ¸Ş¼Òµå°¡ È£Ãâ µÇ´Â ºÎºĞ
+		///// ì£¼ê´€ì‹¬ ì‹¤í–‰ ì½”ë“œ ///////////////////////////////
+		Object obj = point.proceed();   // ì‹¤ì œ íƒ€ì¼“ ëŒ€ìƒ ë©”ì†Œë“œê°€ í˜¸ì¶œ ë˜ëŠ” ë¶€ë¶„
 		//////////////////////////////////////////////////////
 		
-		System.out.println("[LOG] " + methodName2 + " È£Ãâ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
-		System.out.println("[LOG] ½ÇÇà ½Ã°£ : " + sw.getTotalTimeMillis() + " ÃÊ");
+		System.out.println("[LOG] " + methodName2 + " í˜¸ì¶œ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
+		System.out.println("[LOG] ì‹¤í–‰ ì‹œê°„ : " + sw.getTotalTimeMillis() + " ì´ˆ");
 		
 		return obj;
 		

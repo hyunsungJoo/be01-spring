@@ -5,8 +5,8 @@ import lombok.Data;
 
 //@Setter
 //@Getter
-//@NoArgsConstructor  // ¸â¹öº¯¼ö ¾ø´Â µğÆúÆ® »ı¼ºÀÚ ÇÔ¼ö
-//@AllArgsConstructor // ¸ğµç¸â¹öº¯¼ö¸¦ °®°íÀÖ´Â »ı¼ºÀÚÇÔ¼ö
+//@NoArgsConstructor  // ë©¤ë²„ë³€ìˆ˜ ì—†ëŠ” ë””í´íŠ¸ ìƒì„±ì í•¨ìˆ˜
+//@AllArgsConstructor // ëª¨ë“ ë©¤ë²„ë³€ìˆ˜ë¥¼ ê°–ê³ ìˆëŠ” ìƒì„±ìí•¨ìˆ˜
 @Data // getter / setter / toString
 public class IRecordImpl implements IRecord {
 	

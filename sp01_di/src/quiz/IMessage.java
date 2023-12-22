@@ -7,5 +7,5 @@ public interface IMessage {
 
 }
 
-// ÇØ´ç ÀÎÅÍÆäÀÌ½º¸¦ implementsÇÏ´Â Å¬·¡½º ¸¸µé±â - ¿µ¾îÀÎ»ç¸»(IMessageImplEng.java), ÇÑ±ÛÀÎ»ç¸»(IMessageImplKor.java)
-// ºóÀ¸·Î °´Ã¼ »ı¼ºÇÏ±â - IMessageImplKorÀÎ»ç´Â »ı¼ºÀÚÇÔ¼ö ÀÌ¿ë, IMessageImplEng ÀÎ»ç´Â setter method ÀÌ¿ëÇÒ°Í
+// í•´ë‹¹ ì¸í„°í˜ì´ìŠ¤ë¥¼ implementsí•˜ëŠ” í´ë˜ìŠ¤ ë§Œë“¤ê¸° - ì˜ì–´ì¸ì‚¬ë§(IMessageImplEng.java), í•œê¸€ì¸ì‚¬ë§(IMessageImplKor.java)
+// ë¹ˆìœ¼ë¡œ ê°ì²´ ìƒì„±í•˜ê¸° - IMessageImplKorì¸ì‚¬ëŠ” ìƒì„±ìí•¨ìˆ˜ ì´ìš©, IMessageImplEng ì¸ì‚¬ëŠ” setter method

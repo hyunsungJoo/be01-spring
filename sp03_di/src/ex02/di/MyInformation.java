@@ -10,7 +10,7 @@ public class MyInformation {
 	
 //	@Autowired
 //	@Qualifier("info")
-	private Person person; // has-a, Á÷ÀåÀÎ, ÇĞ»ı ¸ğµÎ ¿Ã ¼ö ÀÖÀ½.
+	private Person person; // has-a, ì§ì¥ì¸, í•™ìƒ ëª¨ë‘ ì˜¬ ìˆ˜ ìˆìŒ.
 	
 	// setter method DI
 	public void  processMessage() {
@@ -31,11 +31,11 @@ public class MyInformation {
 	}
 
 	public MyInformation() {
-		System.out.println("info ±âº»»ı¼ºÀÚ");
+		System.out.println("info ê¸°ë³¸ìƒì„±ì");
 	}
 
 //	public MyInformation(Person person) {
 //		super();
-//		System.out.println("info all»ı¼ºÀÚ");
+//		System.out.println("info allìƒì„±ì");
 //	}
 }

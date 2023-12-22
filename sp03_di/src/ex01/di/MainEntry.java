@@ -13,8 +13,8 @@ public class MainEntry {
 		PlayerImpl p = (PlayerImpl)ctx.getBean("player");
 		PlayerImpl p2 = (PlayerImpl)ctx.getBean("p1");
 		
-		//singleton (ÇÏ³ªÀÇ beanÁ¤ÀÇ¿¡ ´ëÇØ¼­ spring ioc container ³»¿¡ ´Ü ÇÏ³ªÀÇ °´Ã¼¸¸ Á¸ÀçÇÑ´Ù.)
-		if(p == p2) { //½Ì±ÛÅæÀÌ¸é same, °´Ã¼ »ı¼ºÇÒ ¶§ scope="prototype"¼³Á¤ÇØÁÖ¸é notsame
+		//singleton (í•˜ë‚˜ì˜ beanì •ì˜ì— ëŒ€í•´ì„œ spring ioc container ë‚´ì— ë‹¨ í•˜ë‚˜ì˜ ê°ì²´ë§Œ ì¡´ì¬í•œë‹¤.)
+		if(p == p2) { //ì‹±ê¸€í†¤ì´ë©´ same, ê°ì²´ ìƒì„±í•  ë•Œ scope="prototype"ì„¤ì •í•´ì£¼ë©´ notsame
 			System.out.println("same");
 		} else {
 			System.out.println("not same");
@@ -25,7 +25,7 @@ public class MainEntry {
 //		p.input();
 //		p.info();
 		
-		String[] sportsName = {"Ãà±¸", "ÄÃ¸µ", "³ó±¸"};
+		String[] sportsName = {"ì¶•êµ¬", "ì»¬ë§", "ë†êµ¬"};
 		Object[] className = {ctx.getBean("soccer"), ctx.getBean("curling"), ctx.getBean("basketball")};
 		
 		for (int i = 0; i < sportsName.length; i++) {
@@ -33,7 +33,7 @@ public class MainEntry {
 			
 			p.input();
 			p.info();
-			System.out.println("Á¾¸ñ : " + sportsName[i]);
+			System.out.println("ì¢…ëª© : " + sportsName[i]);
 		}			
 		
 	}

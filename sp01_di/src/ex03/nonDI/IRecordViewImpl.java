@@ -6,7 +6,7 @@ public class IRecordViewImpl implements IRecordView {
 	
 	private IRecordImpl record;
 	
-	// »ı¼ºÀÚ ÇÔ¼ö ÀÌ¿ë ¹æ¹ı, setter method ÁÖÀÔ ¹æ¹ı 
+	// ìƒì„±ì í•¨ìˆ˜ ì´ìš© ë°©ë²•, setter method ì£¼ì… ë°©ë²• 
 	
 	@Override
 	public void input() {

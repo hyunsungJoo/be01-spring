@@ -18,10 +18,5 @@
 	<bean id="worker" class="ex06.aop.annot.Worker" p:name="세종대왕"
 		p:age="26" p:job="개발자"></bean>
 		
-		
-		
-	
-
-
 
 </beans>

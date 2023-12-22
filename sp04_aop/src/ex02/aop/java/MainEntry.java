@@ -8,16 +8,16 @@ public class MainEntry {
 		ICalc c = new ICalcImpl();
 
 		ICalc proxy = (ICalc)Proxy.newProxyInstance(
-						c.getClass().getClassLoader(), 	// loader : Å¬·¡½º Ã£±â
-						c.getClass().getInterfaces(), 	// interface : ÇàÀ§(ÇÔ¼ö)
-						new LogPrintHandlerImpl(c));    // h : º¸Á¶¾÷¹« ±¸Çö
+						c.getClass().getClassLoader(), 	// loader : í´ë˜ìŠ¤ ì°¾ê¸°
+						c.getClass().getInterfaces(), 	// interface : í–‰ìœ„(í•¨ìˆ˜)
+						new LogPrintHandlerImpl(c));    // h : ë³´ì¡°ì—…ë¬´ êµ¬í˜„
 		
-		// Proxy¸¦ ÅëÇØ¼­ ½ÇÇà
+		// Proxyë¥¼ í†µí•´ì„œ ì‹¤í–‰
 		System.out.println(proxy.add(2, 5));
 		System.out.println(proxy.mul(5, 3));
 		System.out.println(proxy.sub(10, 20, 30));
 		
-		// Å¬·¡½º ÅëÇØ¼­ ½ÇÇà
+		// í´ë˜ìŠ¤ í†µí•´ì„œ ì‹¤í–‰
 //		System.out.println(c.add(1, 2));
 //		System.out.println(c.add(10, 22));
 //		System.out.println();

@@ -6,17 +6,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
-//¾Ë¾Æ¸¸ µÎ±â
+//ì•Œì•„ë§Œ ë‘ê¸°
 @Configuration
-public class JavaConfig {  // xml ¼³Á¤ÆÄÀÏ ¿ªÇÒ ex) ctx.xml, appCtx.xml,...
+public class JavaConfig {  // xml ì„¤ì •íŒŒì¼ ì—­í•  ex) ctx.xml, appCtx.xml,...
 	
 	@Bean
 	public MyCats cat1() { // MyCats cat1 = new MyCats(); / <bean id = "cat1" class = "ex01.annot.java.MyCats"/>
 		ArrayList<String> hobbys = new ArrayList();
-		hobbys.add("µß±¼±â");
-		hobbys.add("¾Õ¹ßµé±â");
+		hobbys.add("ë’¹êµ´ê¸°");
+		hobbys.add("ì•ë°œë“¤ê¸°");
 		
-		MyCats myCats = new MyCats("³ÉÀÌ", 12, hobbys);
+		MyCats myCats = new MyCats("ëƒ¥ì´", 12, hobbys);
 		myCats.setWeight(3.0);
 		myCats.setColor("black");
 		
@@ -26,10 +26,10 @@ public class JavaConfig {  // xml ¼³Á¤ÆÄÀÏ ¿ªÇÒ ex) ctx.xml, appCtx.xml,...
 	@Bean
 	public MyCats cat2() { // MyCats cat1 = new MyCats(); / <bean id = "cat1" class = "ex01.annot.java.MyCats"/>
 		ArrayList<String> hobbys = new ArrayList();
-		hobbys.add("À®Å©ÇÏ±â");
-		hobbys.add("ÀáÀÚ±â");
+		hobbys.add("ìœ™í¬í•˜ê¸°");
+		hobbys.add("ì ìê¸°");
 		
-		MyCats myCats = new MyCats("³ªºñ¾ß", 3, hobbys);
+		MyCats myCats = new MyCats("ë‚˜ë¹„ì•¼", 3, hobbys);
 		myCats.setWeight(2.3);
 		myCats.setColor("white");
 		

@@ -4,17 +4,17 @@ public class CalImpl implements ICalc {
 
 	@Override
 	public int add(int x, int y) {
-		// º¸Á¶°ü½É(cross-cutting-concern)
+		// ë³´ì¡°ê´€ì‹¬(cross-cutting-concern)
 		int result = x + y;
-		// º¸Á¶°ü½É(cross-cutting-concern)
-		System.out.println("add ÁÖ°ü½É»ç");
+		// ë³´ì¡°ê´€ì‹¬(cross-cutting-concern)
+		System.out.println("add ì£¼ê´€ì‹¬ì‚¬");
 		return result;
 	}
 
 	@Override
 	public int mul(int x, int y) {
 		int result = x * y;
-		System.out.println("mul ÁÖ°ü½É»ç");
+		System.out.println("mul ì£¼ê´€ì‹¬ì‚¬");
 		return result;
 	}
 
@@ -22,11 +22,11 @@ public class CalImpl implements ICalc {
 	public int sub(int x, int y, int z) {
 		
 		if(y > z) {
-			throw new IllegalArgumentException("y°ªÀÌ xº¸´Ù Å®´Ï´Ù");
+			throw new IllegalArgumentException("yê°’ì´ xë³´ë‹¤ í½ë‹ˆë‹¤");
 		}
 		
 		int result = x - y - z;
-		System.out.println("sub ÁÖ°ü½É»ç");
+		System.out.println("sub ì£¼ê´€ì‹¬ì‚¬");
 		
 		return result;
 	}

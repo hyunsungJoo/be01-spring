@@ -8,29 +8,29 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.util.StopWatch;
 
-public class LogPrintArroundAdvice implements MethodInterceptor { // °¡Àå ¸¹ÀÌ »ç¿ë
+public class LogPrintArroundAdvice implements MethodInterceptor { // ê°€ì¥ ë§ì´ ì‚¬ìš©
 
 	@Override
 	public Object invoke(MethodInvocation invocation) throws Throwable {
 		
 		System.out.println("Around Servoce invoke() start..........");
 		
-		// º¸Á¶ ¾÷¹«
+		// ë³´ì¡° ì—…ë¬´
 		Log log = LogFactory.getLog(this.getClass());
 		StopWatch sw = new StopWatch();
 		sw.start();
-		log.info("Å¸ÀÌ¸Ó ½ÃÀÛ");
+		log.info("íƒ€ì´ë¨¸ ì‹œì‘");
 		
-		/// ÁÖ°ü½É ÄÚµå ///////////////
-		Object result = invocation.proceed(); // ÁÖ°ü½É»çÀÇ ÇÔ¼ö È£Ãâ
+		/// ì£¼ê´€ì‹¬ ì½”ë“œ ///////////////
+		Object result = invocation.proceed(); // ì£¼ê´€ì‹¬ì‚¬ì˜ í•¨ìˆ˜ í˜¸ì¶œ
 			
 		///////////////////////////
 		
-		// º¸Á¶ ¾÷¹«
+		// ë³´ì¡° ì—…ë¬´
 		sw.stop();
-		log.info("Å¸ÀÌ¸Ó Á¤Áö");
+		log.info("íƒ€ì´ë¨¸ ì •ì§€");
 		
-		log.info("[TimerLOG] Method : " + invocation.getMethod()); // ½ÇÇàÇÑ ¸Ş¼Òµå ¸íÄª
+		log.info("[TimerLOG] Method : " + invocation.getMethod()); // ì‹¤í–‰í•œ ë©”ì†Œë“œ ëª…ì¹­
 		System.out.println("[TimerLOG] args : " + Arrays.toString(invocation.getArguments()));
 		log.info("[TimerLog] process Time : " + sw.getTotalTimeMillis());
 		

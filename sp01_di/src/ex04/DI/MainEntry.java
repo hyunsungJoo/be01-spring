@@ -6,24 +6,24 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MainEntry {
 	public static void main(String[] args) {
 		
-//		ApplicationContext context = new ClassPathXmlApplicationContext("ex04/DI/appCtx.xml"); // ¼³Á¤ÆÄÀÏ ±âÀç - xml±â¹İ
+//		ApplicationContext context = new ClassPathXmlApplicationContext("ex04/DI/appCtx.xml"); // ì„¤ì •íŒŒì¼ ê¸°ì¬ - xmlê¸°ë°˜
 		ApplicationContext context = new ClassPathXmlApplicationContext("appCtx.xml");
-		//ÀÚ±âÇÑÅ× ¸Â´Â¾Ö ¾Ë¾Æ¼­ Ã£¾Æ°¡ÁÜ
+		//ìê¸°í•œí…Œ ë§ëŠ”ì•  ì•Œì•„ì„œ ì°¾ì•„ê°€ì¤Œ
 //		ApplicationContext context = 
 //				new ClassPathXmlApplicationContext(new String[] {"appCtx.xml", "daos.xml", "appCtx.xml"});
 		
 		
 		IRecordViewImpl view = (IRecordViewImpl)context.getBean("view");
-//		IRecordViewImpl view = (IRecordViewImpl)context.getBean("v"); // name(º°ÄªÀ¸·Îµµ µÊ)
-//		IRecordViewImpl view = (IRecordViewImpl)context.getBean("abc"); // name(º°ÄªÀ¸·Îµµ µÊ)
-//		IRecordViewImpl view = context.getBean("view", IRecordViewImpl.class); // ¹æ¹ı2
+//		IRecordViewImpl view = (IRecordViewImpl)context.getBean("v"); // name(ë³„ì¹­ìœ¼ë¡œë„ ë¨)
+//		IRecordViewImpl view = (IRecordViewImpl)context.getBean("abc"); // name(ë³„ì¹­ìœ¼ë¡œë„ ë¨)
+//		IRecordViewImpl view = context.getBean("view", IRecordViewImpl.class); // ë°©ë²•2
 		view.print();
 		
 //		IRecordImpl record = new IRecordImpl();
 //		
 //		IRecordViewImpl view = new IRecordViewImpl();
 //		
-//		//Á¶¸³
+//		//ì¡°ë¦½
 //		view.setRecord(record);
 //		view.input();
 //		view.print();

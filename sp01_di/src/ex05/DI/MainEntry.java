@@ -8,9 +8,9 @@ public class MainEntry {
 		
 		String config = "ex05/DI/memberCtx.xml";
 		
-		ApplicationContext ctx = new ClassPathXmlApplicationContext(config); // ¼³Á¤ÆÄÀÏ
+		ApplicationContext ctx = new ClassPathXmlApplicationContext(config); // ì„¤ì •íŒŒì¼
 		
-		MemberDAO dao = (MemberDAO)ctx.getBean("dao"); // ObjectÅ¸ÀÔÀÌ±â¶§¹®¿¡ Çüº¯È¯ ÇØÁÖ¾î¾ßÇÔ // id
+		MemberDAO dao = (MemberDAO)ctx.getBean("dao"); // Objectíƒ€ì…ì´ê¸°ë•Œë¬¸ì— í˜•ë³€í™˜ í•´ì£¼ì–´ì•¼í•¨ // id
 //		MemberDAO dao2 = ctx.getBean("dao", MemberDAO.class);
 		MemberDAO dao2 = (MemberDAO)ctx.getBean("dao");
 		

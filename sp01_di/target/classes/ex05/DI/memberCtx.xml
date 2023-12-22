@@ -9,11 +9,8 @@
 		<!-- 생성자 -->
 		<bean id = "vo" class = "ex05.DI.MemberDTO" c:age="33" c:message="옵션이용한거야" c:name ="박태환"/>
 			
-
 		<!-- setter -->
 		<bean class= "ex05.DI.MemberDAO" id = "dao" p:dto-ref="vo"/>
-
-		
 		
 		<!-- 객체 생성할때는 bean , 생성자는 constructor-arg -->
 		<!-- <bean id = "vo" class = "ex05.DI.MemberDTO">

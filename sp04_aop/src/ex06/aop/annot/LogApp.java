@@ -8,25 +8,25 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
-public class LogApp { // Advice class - around Àû¿ë
+public class LogApp { // Advice class - around ì ìš©
 	
 	
  @Pointcut("execution(public void get*(..))")
-// @Pointcut("execution(public void get*(..))") // public voidÀÎ ¸ğµç get¸Ş¼Òµå
-// @Pointcut("execution(* ex06.aop.annot.*.*())") // kr.edu.kosa ÆĞÅ°Áö¿¡ ÆÄ¶ó¹ÌÅÍ°¡ ¾ø´Â
-// ¸ğµç ¸Ş¼Òµå
-// @Pointcut("execution(* kr.edu.kosa..*.*())") // kr.edu.kosa ÆĞÅ°Áö &
-// kr.edu.kosta ÇÏÀ§ ÆĞÅ°Áö¿¡ ÆÄ¶ó¹ÌÅÍ°¡ ¾ø´Â ¸ğµç ¸Ş¼Òµå
-// @Pointcut("execution(* kr.edu.kosta.Worker.*())") // kr.edu.kosta.Worker ¾ÈÀÇ
-// ¸ğµç ¸Ş¼Òµå
-// @Pointcut("within(ex06.aop.annot.*)") //kr.edu.kosa ÆĞÅ°Áö ¾È¿¡ ÀÖ´Â ¸ğµç ¸Ş¼Òµå
-// @Pointcut("within(ex06.aop.annot..*)") //kr.edu.kosa ÆĞÅ°Áö ¹× ÇÏÀ§ ÆĞÅ°Áö ¾È¿¡ ÀÖ´Â ¸ğµç
-// ¸Ş¼Òµå
-// @Pointcut("within(ex06.aop.annot.Worker)") //kr.edu.kosa.Worker ¸ğµç ¸Ş¼Òµå
-// @Pointcut("bean(student)") //student ºó¿¡¸¸ Àû¿ë
-// @Pointcut("bean(*ker)") //~ker·Î ³¡³ª´Â ºó¿¡¸¸ Àû¿ë
-// @Pointcut("!bean(student)") // student ºóÀ» Á¦¿ÜÇÑ°Í¿¡ Àû¿ë
-	public void pointCutMethod() {} // pointcut ¾î³ëÅ×ÀÌ¼ÇÀ» ³Ö¾îÁÙ ¸Ş¼Òµå°¡ ÇÏ³ª ÀÖ¾î¾ßÇÔ(´Ù¸® ¿ªÇÒ)
+// @Pointcut("execution(public void get*(..))") // public voidì¸ ëª¨ë“  getë©”ì†Œë“œ
+// @Pointcut("execution(* ex06.aop.annot.*.*())") // kr.edu.kosa íŒ¨í‚¤ì§€ì— íŒŒë¼ë¯¸í„°ê°€ ì—†ëŠ”
+// ëª¨ë“  ë©”ì†Œë“œ
+// @Pointcut("execution(* kr.edu.kosa..*.*())") // kr.edu.kosa íŒ¨í‚¤ì§€ &
+// kr.edu.kosta í•˜ìœ„ íŒ¨í‚¤ì§€ì— íŒŒë¼ë¯¸í„°ê°€ ì—†ëŠ” ëª¨ë“  ë©”ì†Œë“œ
+// @Pointcut("execution(* kr.edu.kosta.Worker.*())") // kr.edu.kosta.Worker ì•ˆì˜
+// ëª¨ë“  ë©”ì†Œë“œ
+// @Pointcut("within(ex06.aop.annot.*)") //kr.edu.kosa íŒ¨í‚¤ì§€ ì•ˆì— ìˆëŠ” ëª¨ë“  ë©”ì†Œë“œ
+// @Pointcut("within(ex06.aop.annot..*)") //kr.edu.kosa íŒ¨í‚¤ì§€ ë° í•˜ìœ„ íŒ¨í‚¤ì§€ ì•ˆì— ìˆëŠ” ëª¨ë“ 
+// ë©”ì†Œë“œ
+// @Pointcut("within(ex06.aop.annot.Worker)") //kr.edu.kosa.Worker ëª¨ë“  ë©”ì†Œë“œ
+// @Pointcut("bean(student)") //student ë¹ˆì—ë§Œ ì ìš©
+// @Pointcut("bean(*ker)") //~kerë¡œ ëë‚˜ëŠ” ë¹ˆì—ë§Œ ì ìš©
+// @Pointcut("!bean(student)") // student ë¹ˆì„ ì œì™¸í•œê²ƒì— ì ìš©
+	public void pointCutMethod() {} // pointcut ì–´ë…¸í…Œì´ì…˜ì„ ë„£ì–´ì¤„ ë©”ì†Œë“œê°€ í•˜ë‚˜ ìˆì–´ì•¼í•¨(ë‹¤ë¦¬ ì—­í• )
 	
 	@Around("pointCutMethod()")
 	public Object loggerApp(ProceedingJoinPoint point) throws Throwable {
@@ -36,11 +36,11 @@ public class LogApp { // Advice class - around Àû¿ë
 		System.out.println("around advice!!!");
 		long st = System.currentTimeMillis();
 		
-		Object obj = point.proceed(); // ÁÖ °ü½É ½ÇÇà ÇÔ¼ö
+		Object obj = point.proceed(); // ì£¼ ê´€ì‹¬ ì‹¤í–‰ í•¨ìˆ˜
 		
 		long end = System.currentTimeMillis();
 		System.out.println(signatureStr + " is Finished");
-		System.out.println(signatureStr + "°æ°ú ½Ã°£ : " + ( end - st ));
+		System.out.println(signatureStr + "ê²½ê³¼ ì‹œê°„ : " + ( end - st ));
 		
 		return obj;
 	}
@@ -48,7 +48,7 @@ public class LogApp { // Advice class - around Àû¿ë
 	@Before("pointCutMethod()")
 	public void beforeAdvice() {
 		System.out.println("beforeAdvice");
-		System.out.println("ÀÔÇĞ°ú ÀÔ»ç¸¦ ÃàÇÏÇØ");
+		System.out.println("ì…í•™ê³¼ ì…ì‚¬ë¥¼ ì¶•í•˜í•´");
 	}
 	
 	@After("pointCutMethod()")
