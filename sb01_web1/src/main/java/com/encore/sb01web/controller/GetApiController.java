@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.encore.sb01web.dto.UserDto;
 
-@RestController
+@RestController // Json 형태로 객체 데이터를 반환
 @RequestMapping("/api/get") // GET,  
 public class GetApiController {
 	
 	@GetMapping("/hello") // GET, http://localhost:8080/api/get/hello
 //	@RequestMapping(path = "/api/get/hello", method = RequestMethod.GET)
-//	@GetMapping(path = "/hello"])
+//	@GetMapping(path = "/hello")
 	public String getHello() {
 		return "<h1>Hello SpringBoot</h1>";
 	}
-	@RequestMapping(path = "/hi", method = RequestMethod.GET) // GET, http://localhost:8080/api/get/hi
+	@RequestMapping(path = "/hi", method = RequestMethod.GET) // GET, http://localhost:8080/api/get/hi, method생략되면 default = GET
 	public String hi() {
 		return "<h1><font color = 'red'>hi~~~</font></h1>";
 	}
@@ -67,7 +67,6 @@ public class GetApiController {
 			
 			sb.append(entry.getKey() + "=" + entry.getValue());
 		}
-		
 		return sb.toString();
 	}
 	

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
+// xml파일이 아닌 자바로 객체를 생성하려면 @Configuration, @Bean 어노테이션을 사용해주어야함
 //알아만 두기
 @Configuration
 public class JavaConfig {  // xml 설정파일 역할 ex) ctx.xml, appCtx.xml,...

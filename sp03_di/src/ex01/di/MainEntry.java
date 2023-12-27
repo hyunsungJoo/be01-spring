@@ -35,6 +35,5 @@ public class MainEntry {
 			p.info();
 			System.out.println("종목 : " + sportsName[i]);
 		}			
-		
 	}
 }

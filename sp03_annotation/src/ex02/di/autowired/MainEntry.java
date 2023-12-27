@@ -7,7 +7,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class MainEntry {
 	public static void main(String[] args) {
 		
-		ApplicationContext ctx = new GenericXmlApplicationContext("ex02/di/autowired/autowiredCtx.xml"); // »ý¼ºÀÚ ½ÇÇà
+		ApplicationContext ctx = new GenericXmlApplicationContext("ex02/di/autowired/autowiredCtx.xml"); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		
 		MonitorViewer viewer = (MonitorViewer)ctx.getBean("monitorViewer");
 		viewer.print();

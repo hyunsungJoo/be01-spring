@@ -48,6 +48,7 @@ import com.encore.sb01web.dto.PostDto;
 @RequestMapping("/api") // POST, http://localhost:8080/api
 public class PostApiController {
 	
+	//주로 노출되면 안되는 데이터를 저장할 때 사용
 	@PostMapping("/post") //http://localhost:8080/api/post
 	public void post(@RequestBody Map<String, String> requestData) {
 		
@@ -64,6 +65,7 @@ public class PostApiController {
 		});
 	}
 	
+	//주로 노출되면 안되는 데이터를 저장할 때 사용
 	@PostMapping("/post-object") // //http://localhost:8080/api/post-object
 	public void postObject(@RequestBody PostDto dto) {
 		System.out.println(dto);

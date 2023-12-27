@@ -2,7 +2,7 @@ package ex05.DI;
 
 public class MemberDAO {
 	
-	private MemberDTO dto;
+	private MemberDTO dto; // has-a
 	
 	public MemberDAO() {}
 

@@ -19,11 +19,11 @@ public class MainEntry {
 //		MyInformation info2 = (MyInformation)ctx.getBean("info2");
 		
 		info.processMessage(stu);
-		info.processMessage(emp); //??????????
+		info.processMessage(emp); //?????????? 
 //		info.setPerson(new StudentPerosnImpl());
 		info.processMessage();
 		
-		info.processMessage("gildong", 30, "³²ÀÚ");
+		info.processMessage("gildong", 30, "ï¿½ï¿½ï¿½ï¿½");
 		
 		ArrayList<String> hobbys = new ArrayList();
 		hobbys.add("aa");
@@ -34,6 +34,5 @@ public class MainEntry {
 		emp.personShow(hobbys);
 		info2.processMessage(emp);
 		info2.processMessage(stu);
-		
 	}
 }

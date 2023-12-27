@@ -7,11 +7,12 @@ public class MainEntry {
 		
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(JavaConfig.class);
 		
-		
+		// "catsInfo" : javaConfig의 메서드 이름 
 		Cats info = (Cats)ctx.getBean("catsInfo");
 		info.getMyCatsInfo();
 		
-		MyCats cats2 = (MyCats)ctx.getBean("cat2");
+		// "cat1" : javaConfig의 메서드 이름 
+		MyCats cats2 = (MyCats)ctx.getBean("cat1");
 		info.setMyCats(cats2);
 		info.getMyCatsInfo();
 		
