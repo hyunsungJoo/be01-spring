@@ -1,0 +1,33 @@
+##application.yml
+#server:
+#  port:8080
+#
+##db connection(Mariadb)
+#Spring:
+#  sql:
+#    init:
+#    platform: mariadb
+#    encoding: UTF-8
+#    mode: always
+#
+#  datasource:
+#    url:jdbc:mariadb://localhost:3306/sampledb
+#    driver-class-name: org.mariadb.jdbc.Driver
+#    username: root
+#    password: maria
+#
+#  devtools:
+#    livereload:
+#      enabled: true
+#      
+##thymeleaf auto refresh
+#  thymleaf:
+#    cache: false
+#
+##mariadb mapping
+##mapper.xml
+#mybatis:
+#  type-aliases-package: com.encore.sb03myBatis.model.mapper
+#    mapper-locations: mybatis/**/*.xml
+#
+##TestTableMapper.xml

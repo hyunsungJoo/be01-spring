@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>insert.html</title>
+</head>
+<body>
+<div>
+	<h1>User Insert Page</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>userCode</th>
+				<th>userName</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+		<tr>
+			<th th:text = "{vo.userCode}"></th>
+			<th th:text = "{vo.userName}"></th>
+		</tr>
+		</tbody>
+		<tr><a th:href="@{/list}">리스트</a></tr>
+	</table>
+</div>
+</body>
+</html>
